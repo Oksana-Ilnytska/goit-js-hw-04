@@ -1,29 +1,32 @@
 function isEnoughCapacity(products, containerSize) {
-    let fruits = 0;
-    let item = 0;
-    for (item of Object.values(product)) {
-        fruits += item;
-    }   
-if (fruits <= containerSize) {
-    return true;
-}
-return false;
+  let valuesItemSumm = 0;
+  for (let item of Object.values(products)) {
+    valuesItemSumm += item;
+  }
+if (valuesItemSumm <= containerSize) {  
+  return true; 
+  }
+  return false; 
 }
 
 
 
 console.log(
     isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
-  ); // true
+  ); 
   
   console.log(
     isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)
-  ); // false
+  ); 
   
   console.log(
     isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)
-  ); // true
+  ); 
   
   console.log(
     isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)
-  ); // false
+  ); 
+
+
+
+  
